@@ -30,3 +30,19 @@ func main() {
 		println("the response is  " , res.Status)
 
 }
+
+/**
+Note:
+1. http.RoundTripper is default used and it is used to cache and use of it
+2. httptrace is used to trace the following events
+	Connection creation
+	Connection reuse
+	DNS lookups
+	Writing the request to the wire
+	Reading the response
+3. Both 1 and 2 are used internally by http client
+4. By default timeout is 0 for waiting for response. so , please use the timeout otherwise once connection is established no timeout and it will wait till it get response
+
+
+
+*/
